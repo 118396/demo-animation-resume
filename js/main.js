@@ -21,7 +21,7 @@ function writeCode(prefix,code,fn){
        window.clearInterval(id) //将定时器清除
        fn && fn.call()
     }
-  },0)
+  },50)
 }
 
 function writeMarkdown(markdown, fn){
@@ -35,7 +35,7 @@ function writeMarkdown(markdown, fn){
        window.clearInterval(id)
        fn && fn.call()
     }
-  },0)
+  },50)
 }
 
 var result = `/*
@@ -112,11 +112,10 @@ var id = setInterval(()=>{
      fn3(result)
   }
 },10) */
-// var result2 = `
-//     #paper{
-//     }  
-//     /* 接下来把 Mrkdown 变成 HTML - marked.js*/
-//     `
+var result2 = `
+    #paper{
+    }  
+    `
 var md = `
 # 自我介绍
 我叫 xx 
